@@ -159,7 +159,7 @@
       letter-spacing: 1px;
       padding: 18px 0;
       border-radius: 12px;
-      border: none;
+      border: none; /* 거슬리던 테두리 제거 */
       cursor: pointer;
       width: 100%;
       box-shadow: 0 8px 20px rgba(47, 97, 84, 0.3);
@@ -269,25 +269,26 @@
       />
       <div class="img-overlay absolute inset-0"></div>
 
-      <!-- 좌측 상단: 온라인 상태 -->
+      <!-- 좌측 상단: 온라인 상태 (배경 가독성 개선) -->
       <div class="absolute top-5 left-5 md:top-10 md:left-10 flex items-center gap-2 md:gap-2.5 bg-[rgba(10,10,9,0.8)] backdrop-blur-md border border-[rgba(255,255,255,0.1)] shadow-lg px-3 py-1.5 md:px-4 md:py-2 rounded-full">
         <div class="online-dot"></div>
         <span class="text-[11px] md:text-[13px] tracking-wider font-medium" style="color:var(--jade-light);">지금 대화 가능</span>
       </div>
 
-      <!-- 세가 인장 및 텍스트 -->
+      <!-- 세가 인장 및 텍스트 (모바일:우측상단 / PC:좌측하단) -->
       <div class="absolute top-5 right-5 md:top-auto md:right-auto md:bottom-12 md:left-10 flex items-center gap-6">
         <div class="seal-deco"><span>欒</span></div>
+        <!-- PC에서만 보이는 인장 옆 텍스트 -->
         <div class="hidden md:block">
           <p class="text-[11px] tracking-[0.3em] mb-1.5 font-medium" style="color:rgba(219,205,171,0.7);">대경 남부 최대 명문세가</p>
           <p class="serif text-2xl font-semibold tracking-[0.2em]" style="color:var(--gold);">欒氏世家</p>
         </div>
       </div>
 
-      <!-- 우측 상단: 수직 한자 데코 -->
+      <!-- 우측 상단: 수직 한자 데코 (PC 전용) -->
       <div class="hidden md:block absolute top-16 right-8 vertical-deco">臨安 沈雲軒 己丑</div>
 
-      <!-- 모바일 전용 이름 오버레이 -->
+      <!-- 모바일 전용 이름 오버레이 (좌측 하단) -->
       <div class="absolute bottom-6 left-6 right-6 md:hidden">
         <div class="flex flex-col">
           <h1 class="serif text-4xl font-bold tracking-widest mb-1" style="color:var(--paper); text-shadow: 0 2px 4px rgba(0,0,0,0.6);">난무운</h1>
@@ -296,10 +297,10 @@
       </div>
     </div>
 
-    <!-- ── 오른쪽/하단: 스크롤 정보 패널 ── -->
+    <!-- ── 오른쪽/하단: 스크롤 정보 패널 (통합 콘텐츠) ── -->
     <div class="flex-1 px-5 pt-8 md:px-10 lg:px-16 md:py-14 bg-gradient-to-b from-transparent to-[rgba(18,17,15,0.8)] md:bg-none md:overflow-y-auto md:h-screen scroll-area">
 
-      <!-- 헤더 -->
+      <!-- 헤더 (PC 전용 노출) -->
       <div class="hidden md:flex items-start justify-between mb-8">
         <div>
           <h1 class="serif text-5xl font-bold tracking-widest mb-3" style="color:var(--paper);">난무운</h1>
@@ -372,11 +373,12 @@
             <span>30세</span>
           </div>
           <div class="flex items-start">
-            <span class="w-16 md:w-24 flex-shrink-0 font-semibold md:tracking-wider" style="color:var(--paper);">명칭</span>
-            <span class="flex flex-col">
-              <span>휘(諱): 현(泫)</span>
-              <span>자(字): 무운(霧雲)</span>
-            </span>
+            <span class="w-16 md:w-24 flex-shrink-0 font-semibold md:tracking-wider" style="color:var(--paper);">휘(諱)</span>
+            <span>현(泫)</span>
+          </div>
+          <div class="flex items-start">
+            <span class="w-16 md:w-24 flex-shrink-0 font-semibold md:tracking-wider" style="color:var(--paper);">자(字)</span>
+            <span>무운(霧雲)</span>
           </div>
           <div class="flex items-start">
             <span class="w-16 md:w-24 flex-shrink-0 font-semibold md:tracking-wider" style="color:var(--paper);">가족</span>
@@ -388,15 +390,15 @@
           </div>
           <div class="flex items-start">
             <span class="w-16 md:w-24 flex-shrink-0 font-semibold md:tracking-wider" style="color:var(--paper);">MBTI</span>
-            <span>ISTJ (1w2 sx/so)</span>
+            <span>ISTJ</span>
           </div>
           <div class="flex items-start">
             <span class="w-16 md:w-24 flex-shrink-0 font-semibold md:tracking-wider" style="color:var(--paper);">호(好)</span>
-            <span>당신, 청다(靑茶), 서화, 탕위안, 바둑</span>
+            <span>당신 · 청차(靑茶) · 서화 · 탕원(湯圓) · 바둑</span>
           </div>
           <div class="flex items-start">
             <span class="w-16 md:w-24 flex-shrink-0 font-semibold md:tracking-wider" style="color:var(--paper);">불호(惡)</span>
-            <span>신세 지는 상황, 더위, 불결함, 제어할 수 없는 것</span>
+            <span>신세 지는 상황 · 더위 · 불결함 · 제어할 수 없는 것</span>
           </div>
           <div class="flex items-start pt-2">
             <span class="w-16 md:w-24 flex-shrink-0 font-semibold md:tracking-wider mt-1" style="color:var(--paper);">TMI</span>
