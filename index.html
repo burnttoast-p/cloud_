@@ -159,7 +159,7 @@
       letter-spacing: 1px;
       padding: 18px 0;
       border-radius: 12px;
-      border: none; /* 거슬리던 테두리 제거 */
+      border: none;
       cursor: pointer;
       width: 100%;
       box-shadow: 0 8px 20px rgba(47, 97, 84, 0.3);
@@ -331,13 +331,25 @@
       </div>
 
       <!-- 상세 소개 -->
-      <div class="text-[15px] md:text-[16px] leading-loose md:leading-[1.8] font-normal mb-8 md:mb-10" style="color:var(--paper-muted);">
+      <div class="text-[15px] md:text-[16px] leading-loose md:leading-[1.8] font-normal mb-5 md:mb-6" style="color:var(--paper-muted);">
         <p class="mb-6">
           임안성 내 최대 명문세가, 난씨세가의 가주. 흰 머리카락과 옅은 갈색 눈동자, 오른쪽 눈가의 미인점이 유독 눈에 띄는 남자. 병약한 몸을 장포 깊숙이 감추고, 조용하고 온화한 어조 뒤에 치밀한 통제욕을 숨겨 두고 있다.
         </p>
         <p>
           그는 당신의 손위형제다. 어릴 적부터 곁에서 머리를 쓸어 주고, 잔에 차를 따라 주고, 언제나 딱 한 걸음 거리를 유지하던 사람. 그 다정함이 진심인지, 아니면 ■■인지, 그 자신도 아직 모른다.
         </p>
+      </div>
+
+      <!-- BGM 버튼 -->
+      <div class="mb-8 md:mb-10 flex justify-start">
+        <a href="https://youtu.be/iFdj4_cgUa8?si=ru09IwZqB95Pwj8Z" target="_blank" class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.02)] hover:bg-[rgba(85,158,137,0.1)] hover:border-[rgba(85,158,137,0.4)] transition-all text-[13px] md:text-[14px] text-[var(--paper-muted)] hover:text-[var(--jade-light)] backdrop-blur-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18V5l12-2v13"></path>
+            <circle cx="6" cy="18" r="3"></circle>
+            <circle cx="18" cy="16" r="3"></circle>
+          </svg>
+          <span class="font-medium tracking-wide">BGM — 초록을거머쥔우리는</span>
+        </a>
       </div>
 
       <hr class="divider mb-8 md:mb-10" />
@@ -360,12 +372,11 @@
             <span>30세</span>
           </div>
           <div class="flex items-start">
-            <span class="w-16 md:w-24 flex-shrink-0 font-semibold md:tracking-wider" style="color:var(--paper);">휘(諱)</span>
-            <span>현(泫)</span>
-          </div>
-          <div class="flex items-start">
-            <span class="w-16 md:w-24 flex-shrink-0 font-semibold md:tracking-wider" style="color:var(--paper);">자(字)</span>
-            <span>무운(霧雲)</span>
+            <span class="w-16 md:w-24 flex-shrink-0 font-semibold md:tracking-wider" style="color:var(--paper);">명칭</span>
+            <span class="flex flex-col">
+              <span>휘(諱): 현(泫)</span>
+              <span>자(字): 무운(霧雲)</span>
+            </span>
           </div>
           <div class="flex items-start">
             <span class="w-16 md:w-24 flex-shrink-0 font-semibold md:tracking-wider" style="color:var(--paper);">가족</span>
@@ -377,15 +388,15 @@
           </div>
           <div class="flex items-start">
             <span class="w-16 md:w-24 flex-shrink-0 font-semibold md:tracking-wider" style="color:var(--paper);">MBTI</span>
-            <span>ISTJ</span>
+            <span>ISTJ (1w2 sx/so)</span>
           </div>
           <div class="flex items-start">
             <span class="w-16 md:w-24 flex-shrink-0 font-semibold md:tracking-wider" style="color:var(--paper);">호(好)</span>
-            <span>당신 · 청차(靑茶) · 서화 · 탕원(湯圓) · 바둑</span>
+            <span>당신, 청다(靑茶), 서화, 탕위안, 바둑</span>
           </div>
           <div class="flex items-start">
             <span class="w-16 md:w-24 flex-shrink-0 font-semibold md:tracking-wider" style="color:var(--paper);">불호(惡)</span>
-            <span>신세 지는 상황 · 더위 · 불결함 · 제어할 수 없는 것</span>
+            <span>신세 지는 상황, 더위, 불결함, 제어할 수 없는 것</span>
           </div>
           <div class="flex items-start pt-2">
             <span class="w-16 md:w-24 flex-shrink-0 font-semibold md:tracking-wider mt-1" style="color:var(--paper);">TMI</span>
@@ -449,7 +460,7 @@
 
       <hr class="divider mb-8 md:mb-10" />
 
-      <!-- 난부 -->
+      <!-- 난부 (독립 섹션) -->
       <div class="mb-10 md:mb-12">
         <h2 class="text-[13px] md:text-[14px] tracking-[0.2em] mb-5 md:mb-6 font-bold flex items-center gap-2 md:gap-3" style="color:var(--jade-light);">
           <span class="w-1.5 md:w-2 h-px bg-[rgba(139,194,175,0.8)]"></span>
